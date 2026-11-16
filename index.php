@@ -112,6 +112,7 @@ $result->data_seek(0);
                         <th>Latitude</th>
                         <th>Kecamatan</th>
                         <th>Wilayah</th>
+                        <th>AKSI</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -127,6 +128,10 @@ $result->data_seek(0);
                                 <td>" . $row["latitude"] . "</td>
                                 <td>" . $row["kecamatan"] . "</td>
                                 <td>" . $row["wilayah"] . "</td>
+                                <td>
+                                    <a href='edit/index.php?id=".$row["id"]."'>Edit</a> | 
+                                    <a href='delete.php?id=".$row["id"]."' class='text-danger' onclick=\"return confirm('Hapus data ini?');\">Hapus</a>
+                                </td>
                             </tr>";
                         }
                     } else {
